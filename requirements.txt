@@ -1,0 +1,4 @@
+jmespath
+pypdf
+reportlab
+gradio
