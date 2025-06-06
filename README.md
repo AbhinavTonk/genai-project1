@@ -5,7 +5,7 @@
 1) Navigate to the root directory of your project
 2) python -m venv venv
 3) Activating (From root directory where venv folder is created)
-    a) Windows: \venv\Scripts\activate.bat
+    a) Windows: venv\Scripts\activate.bat
     b) Unix: source venv/bin/activate
 
 # Installing Dependencies (from root folder of project where requirements.txt is present)

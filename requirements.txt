@@ -2,5 +2,12 @@ jmespath
 pypdf
 reportlab
 gradio
-langchain
 pyautogen
+streamlit
+langchain
+langchain-community
+langchain-core
+langchain_openai
+chromadb
+openai
+tiktoken

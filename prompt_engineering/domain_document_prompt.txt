@@ -1,0 +1,5 @@
+Act as a : {role}
+Consider this as Base Context : {context}
+Your Query is : {query}
+Use the tone as : {tone}
+Output format should be : {format}
