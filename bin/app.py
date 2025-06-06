@@ -1,6 +1,6 @@
 import gradio as gr
 
-from lib.openai_util import ask_domain_knowledge_agent
+from ai_agents.domain_agent import ask_domain_knowledge_agent
 
 
 # Dummy backend functions for each sub-agent
