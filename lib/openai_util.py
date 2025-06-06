@@ -5,10 +5,9 @@ from langchain.chains.llm import LLMChain
 
 import lib.text_file_util as text_file_util
 import lib.pdf_util as pdf_util
+from config.api_key_config import api_key
 from lib.rag_util import base_context_creation_and_retrieval_vector_db
 from prompt_engineering import role, audience, output_format, tone
-
-api_key = os.getenv("OPENAI_API_KEY")
 
 # Domain Knowledge Agent
 def ask_domain_knowledge_agent(base_context_folder, query):
@@ -35,7 +34,7 @@ def ask_domain_knowledge_agent(base_context_folder, query):
         "context": context_text,
         "role": role.PRODUCT_OWNER,
         "tone": tone.PROFESSIONAL,
-        "format": output_format.TABLE
+        "format": output_format.HTML
     }
 
     # Step 5: Run LLMChain
@@ -44,9 +43,9 @@ def ask_domain_knowledge_agent(base_context_folder, query):
 
     print("Answer:\n", response)
 
-    # Step 6: Save outputs
-    text_file_util.write_text_file("outputs/output.txt", response)
-    pdf_util.create_pdf("outputs/output.pdf", response)
+    # Step 6: Save outputs (when using non html formats)
+    # text_file_util.write_text_file("outputs/output.txt", response)
+    # pdf_util.create_pdf("outputs/output.pdf", response)
 
     return response
 

@@ -20,7 +20,8 @@ domain_interface = gr.Interface(
     fn=domain_knowledge_agent,
     inputs=[gr.Textbox(label="Enter Complete Root Folder Path for your Domain Documents", placeholder="/path/to/your/domaindocument/rootfolder/using/forward/slash"),
             gr.Textbox(label="Ask Domain Knowledge Agent")],
-    outputs=gr.Textbox(label="Response"),
+    #outputs=gr.Textbox(label="Response"),
+    outputs=gr.HTML(),
     title="🧠 Domain Knowledge Agent",
     description="Handles domain-specific queries."
 )

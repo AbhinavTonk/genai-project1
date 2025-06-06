@@ -5,6 +5,9 @@ from langchain_text_splitters import CharacterTextSplitter
 from langchain_community.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
 
+from config.api_key_config import api_key
+
+
 def get_file_state(root_folder):
     file_state = {}
     for root, dirs, files in os.walk(root_folder):
